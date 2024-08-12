@@ -1,0 +1,76 @@
+<!-- Sección Formulario -->
+<div class="container d-flex justify-content-center align-items-center container-principal">
+    <!-- Contenedor principal centrado tanto horizontal como verticalmente -->
+    <div class="row bg-white p-4 rounded-3 shadow box-area">
+        <!-- Fila con borde, esquinas redondeadas, padding, fondo blanco -->
+        <form 
+         class="col-md-6 box-right"
+         [formGroup] = 'form'
+         (ngSubmit) = 'onSubmit()'
+         >
+            <!-- Columna derecha (formularios) -->
+            <div class="text-center mb-4">
+                <!-- Contenedor del texto del encabezado -->
+                <h4>¿Preparado para encontrar tu próxima 
+                    <span style="color: #222D56; font-size: 30px; font-weight: bold;">oportunidad?</span> 
+                    <img src="assets/img-registrarse/mano.png" style="width: 35px;" class="ms-2" alt="Mano">
+                </h4>
+            </div>
+            
+            <!-- Botones de inicio de sesión -->
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6">
+                    <img src="assets/img-registrarse/google.png" style="width: 20px;" class="me-2" alt="Google">
+                    <small>Iniciar sesión con Google</small>
+                </button>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6">
+                    <img src="assets/img-registrarse/facebook.png" style="width: 20px;" class="me-2" alt="Facebook">
+                    <small>Iniciar sesión con Facebook</small>
+                </button>
+            </div>
+            <div class="text-center my-3"> o </div>
+
+            <!-- Campos de formulario -->
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-address-card"></i></span>
+                <input formControlName="nombre" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nombre">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-address-card"></i></span>
+                <input formControlName="apellido" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Apellido">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+                <input formControlName="fecha_nacimiento" type="date" class="form-control form-control-lg bg-light fs-6" placeholder="Fecha de nacimiento">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                <input formControlName="email" type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Correo electrónico">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                <input formControlName="contraseña" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Contraseña">
+                <span id="toggle-password-1" class="toggle-password">👁️</span>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-key"> </i></span>
+                <input formControlName="confirmar" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Confirma tu contraseña">
+                <span id="toggle-password-2" class="toggle-password">👁️</span>
+            </div>
+            
+            <!-- Botón de crear cuenta -->
+            <div class="input-group mb-2">
+                <button type="submit" [disabled]="form.invalid" style="background-color: #FFBA08; border-color: #FFBA08;" class="btn btn-lg btn-primary w-100 fs-6">Crear cuenta</button>
+            </div>
+        </form>
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column ">
+            <!-- Columna izquierda con esquinas redondeadas, centrado de contenido y fondo blanco -->
+            <div class="featured-image mb-3">
+                <img class="img-fluid" src="assets/img-registrarse/img-cohete.png" class="img-fluid" style="width: 350px;" alt="Imagen destacada">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Sección Formulario -->

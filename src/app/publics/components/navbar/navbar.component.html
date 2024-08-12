@@ -1,0 +1,31 @@
+<!-- Barra de navegación  -->
+<header class="header ">
+    <div class="nav-main container d-flex align-items-center">
+   <!--Logo fundación antivirus-->
+     <div class="logo">
+       <img src="/assets/Logo-Fundación-Antivirus.png" alt="Logo Fundación">
+     </div>
+ 
+     <nav class="nav-bar" id="nav-bar">
+       <ul class="nav-links">
+           <li><a routerLink="home">Inicio</a></li>
+           <li (click)="scroll()"><a>Oportunidades</a></li>
+           <li (click)="scroll2()"><a>Servicios</a></li>
+           
+       </ul>
+      
+       <!--Botones de inicio de sesión y registro-->
+         <div class="container-fluid log-buttons">
+           <a class="btn" routerLink="login"><button>Ingresa</button></a>
+           <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
+         </div>        
+   
+       </nav>
+ 
+         <div class="nav__toggle" id="nav-toggle">
+         <i class="bx bx-menu" id="menu-button"></i>
+         </div>
+       
+       </div>
+ 
+     </header>

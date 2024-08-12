@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';//permite navegar entre las rutas principales
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,28 @@
+      <!-- Inicio sección futuro -->
+      <dialog #modalFuturo>
+        <h2 class= "modalp-futuro"> ¡Hola!, deja tus datos de contacto aquí</h2>
+        <form id="contacto-form">
+            <label> Nombre <input type="text" name="nombre" required></label><br>
+            <label> Correo <input type="email" name="correo" required></label><br>
+            <label> Número de contacto <input type="tel" name="contacto" required></label><br>
+            <button type="submit" id="contacto-form" class="btn btn-success btn-accion">Enviar</button>
+            <button (click)="closeModal()" type="button" id="btn-cerrar-modal" class="btn btn-secondary btn-accion">Cerrar</button>
+        </form>
+    </dialog>
+
+      <main class="main-futuro container">
+        <div class="col-md-6 datos-futuro">
+            <h1 class="titulo-futuro">¡Tu futuro inicia aquí!</h1>
+            <p class="parrafo-futuro">En la fundación Antivirus para la Deserción creemos que cada persona merece acceso a las mejores oportunidades. Por eso, ofrecemos una plataforma personalizada donde puedes explorar becas, cursos y programas adaptados a tus intereses.</p>
+          
+          <div class="btn-group">
+            <button (click)="openModal()" id="btn-abrir-modal" class="btn btn-primary">Contáctanos</button>
+            <a href="https://www.fundacionantivirusparaladesercion.org/fundacion" target="_blank" class="btn btn-outline-secondary btn-futuro">Conoce sobre nosotros</a>
+          </div>
+
+            </div>
+            <div class="col-md-5 d-flex justify-content-end"> 
+                <img class="img-futuro" src="assets/banco.png" alt="Imagen">
+            </div>
+        </main>
+       <!-- Fin sección futuro -->

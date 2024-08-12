@@ -1,0 +1,24 @@
+<div class="wrapper container">
+    <h2 class="t-oportunidades" id="oportunidades"> ¡Mira estas oportunidades! </h2>
+    <ul 
+        class="carousel"
+        #scrollX
+        >
+        <li 
+        class="card"
+        *ngFor="let item of cards; let i = index"
+        >
+            <img src={{cards[i].img}} alt={{cards[i].alt}} draggable={{cards[i].draggable}}>
+            <div class="info-container">
+                <h2>{{cards[i].title}}</h2>
+                <p>{{cards[i].paragraph}}</p>
+            </div>
+            
+            
+        </li>
+    </ul>
+    <div class="arrows">
+        <p class="i" id="left" (click)="leftPosition()">&lt;</p>
+        <p class="i" id="right" (click)="rightPosition()">&gt;</p>
+    </div>
+</div>

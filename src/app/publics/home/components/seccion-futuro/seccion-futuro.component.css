@@ -1,0 +1,281 @@
+
+/*SECCIÓN FÚTURO MELISA-INICIO*/
+.main-futuro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto 70px;
+}
+
+
+.titulo-futuro {
+    font-family: 'Impact', sans-serif;
+    font-size: 3.5rem;
+    font-size: 70px;
+    color: #222D56;
+    margin-bottom: 1rem;
+    margin-top: 50px;
+}
+
+.parrafo-futuro {
+    color: #222D56;
+    font-family: 'Acumin Variable Concept', sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/*COMIENZA LA VENTANA MODAL*/
+
+.modalp-futuro {
+    color:#222D56;
+    font-family: 'Acumin Variable Concept', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#btn-abrir-modal {
+    background-color: #FFBA08;
+    color: #fff;
+    border: 1px solid;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#btn-abrir-modal:hover {
+    color: #FAA307;
+    background-color: #fff;
+}
+
+dialog {
+    font-family: 'Acumin Variable Concept', sans-serif;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(61, 48, 48, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+    position: fixed;
+    background: rgba(215, 217, 223, 0.9);
+}
+
+dialog h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    color: #222D56;
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+}
+
+#contacto-form button[type="submit"] {
+    background-color: #222D56;
+    color: white;
+    border: none;
+    padding: 10px; /* Aumenta el padding */
+    font-size: 1em; /* Aumenta el tamaño de la fuente */
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 200;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón sea tan ancho como el contenedor */
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+#contacto-form button[type="submit"]:hover {
+    color: #32526E;
+    background-color: #fff;
+}
+
+
+#btn-cerrar-modal {
+    background-color: #FFBA08;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón sea tan ancho como el contenedor */
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+#btn-cerrar-modal:hover {
+    color: #FAA307;
+    background-color: #fff;
+}
+
+a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*TERMINA LA VENTANA MODAL*/
+
+.col-md-5 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+.img-futuro {
+    width: 500px;
+    height: auto;
+    margin-top: 40px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* opacity: 0; */
+    animation: fadeInMove 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* MEDIA QUERY GENERAL*/
+
+@media screen and (max-width: 800px) {
+    .main-futuro {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .titulo-futuro {
+        text-align: center;
+    }
+
+    .parrafo-futuro {
+        margin-bottom: 20px;
+        text-align: justify;
+        font-size: 20px;
+    }
+
+    .img-futuro {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .btn-group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
+    .btn-group > button, .btn-group > a {
+        width: 50%;
+    }
+}
+
+/*MEDIA QUERY VENTANA MODAL
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    dialog {
+        max-width: 90%;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input {
+        font-size: 0.9em;
+    }
+
+    form button[type="submit"],
+    #btn-cerrar-modal {
+    font-size: 0.9em;
+    padding: 10px;
+   }
+
+
+}
+/* Media queries para pantallas medianas */
+@media screen and (max-width: 800px) {
+    dialog {
+        max-width: 80%;
+        padding: 18px;
+        font-size: 0.95em;
+    }
+
+    form label {
+        font-size: 0.95em;
+    }
+
+    form input {
+        font-size: 0.95em;
+    }
+
+    #btn-cerrar-modal {
+        font-size: 0.95em;
+        padding: 9px;
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    dialog {
+        max-width: 40%;
+        padding: 25px;
+        font-size: 1em;
+    }
+
+    form label {
+        font-size: em;
+    }
+
+    form input {
+        font-size: 1em;
+    }
+
+    form button[type="submit"],
+    #btn-cerrar-modal {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
