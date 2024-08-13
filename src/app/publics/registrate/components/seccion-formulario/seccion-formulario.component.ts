@@ -1,6 +1,8 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ConexionService } from '../../services/conexion.service';
+import { FacebookLoginProvider, SocialAuthService } from '@abacritt/angularx-social-login';
+import { GoogleApiService } from '../../services/google-api.service';
 
 @Component({
   selector: 'app-seccion-formulario',
@@ -8,11 +10,13 @@ import { ConexionService } from '../../services/conexion.service';
   styleUrl: './seccion-formulario.component.css',
   providers: [ConexionService]
 })
-export class SeccionFormularioComponent implements AfterViewInit{
+export class SeccionFormularioComponent implements OnInit{
   form!: FormGroup
   constructor(
     private method: FormBuilder,
-    private conexionService: ConexionService
+    private conexionService: ConexionService,
+    private authService: SocialAuthService,
+    private googleApiService: GoogleApiService
   ){
     this.form = this.method.group({
       nombre: ['', Validators.required],
@@ -24,12 +28,18 @@ export class SeccionFormularioComponent implements AfterViewInit{
     })
   }
 
+user: any
+loggedIn: any
 
 
-  ngAfterViewInit(): void {
-
+ngOnInit(): void {
+  this.authService.authState.subscribe((user)=>{
+    this.user= user
+    console.log(this.user);
+    this.loggedIn= user != null
     
-  }
+  })
+}
 
   onSubmit(){
     if(this.form.valid){
@@ -43,4 +53,18 @@ export class SeccionFormularioComponent implements AfterViewInit{
       
     }
   }
+
+  signInFacebook(){
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
+  }
+  signInGoogle(){
+    this.googleApiService.signInGoogle()
+    .then((res)=>{
+      console.log('Ususario Logeado', res.user);
+    })
+    .catch((error)=>{
+      console.error('Verifique los daros ingresados',error)
+    })
+  }
 }
+
