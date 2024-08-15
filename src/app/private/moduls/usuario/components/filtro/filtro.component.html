@@ -1,0 +1,68 @@
+ <!-- Barra de busqueda de oportunidades-->    
+ <div class="container date-filter-container">
+    <form class="filtrar-b d-flex gap-3 align-items-center" role="search">
+        <div class="input-group date-filter">
+            <span class="input-group-text" id="basic-addon1" style="color:#222D56; font-weight: bold;">Filtra tu búsqueda:</span>
+            <input type="date" class="form-control" id="start-date" aria-label="Fecha de inicio" placeholder="Fecha de inicio">
+            <input type="date" class="form-control" id="end-date" aria-label="Fecha de fin" placeholder="Fecha de fin">
+        </div>
+    </form>
+
+    <div class="container d-flex gap-3 align-items-center mt-3 filter-options-container">
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar ubicación">
+                Ubicación
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Medellín</a></li>
+                <li><a class="dropdown-item" href="#">Bello</a></li>
+                <li><a class="dropdown-item" href="#">Itaguí</a></li>
+            </ul>
+            <input type="text" class="form-control intr-ubica" aria-label="Texto con botón de selección de ubicación" placeholder="Introduce ubicación">
+        </div>
+
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar tipo de oportunidad">
+                Tipo de Oportunidad
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Trabajo</a></li>
+                <li><a class="dropdown-item" href="#">Voluntariado</a></li>
+                <li><a class="dropdown-item" href="#">Prácticas</a></li>
+            </ul>
+            <input type="text" class="form-control intr-oportun" aria-label="Texto con botón de selección de tipo de oportunidad" placeholder="Introduce tipo de oportunidad">
+        </div>
+
+        <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Seleccionar sector">
+                Sector
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <li><a class="dropdown-item" href="#">Tecnología</a></li>
+                <li><a class="dropdown-item" href="#">Salud</a></li>
+                <li><a class="dropdown-item" href="#">Educación</a></li>
+            </ul>
+            <input type="text" class="form-control intr-sect" aria-label="Texto con botón de selección de sector" placeholder="Introduce sector">
+        </div>
+        <div>
+            <button type="button" class="boton-busqueda">Búsqueda</button>
+        </div>
+        <div>
+            <button type="button" class="boton-limpiar">Limpiar</button>
+        </div>
+    </div>
+
+    <div  class="resultado-intr-ubica"  id="resultado-intr-ubica" class="mt-3">
+        <!-- Aquí se mostrará la selección de la ubicación -->
+    </div>
+
+    <div class="resultado-intr-oportun"  id="resultado-intr-oportun" class="mt-3">
+        <!-- Aquí se mostrará la selección del tipo de oportunidad -->
+    </div>
+
+    <div class="resultado-intr-sect" id="resultado-intr-sect" class="mt-3">
+        <!-- Aquí se mostrará la selección del sector -->
+    </div>
+</div>
+
+ <!-- Fin Filtro de búsqueda -->

@@ -6,9 +6,12 @@
     font-weight: 900;
     font-family: verdana;
     padding: 0 10% ;
+    display: flex;
+    justify-content: center;
 }   
 .header .logo {
     cursor: pointer;
+    width: 8rem;
 }
 
 .header .logo img {
@@ -21,13 +24,11 @@
     transform: scale(1.2);
 }
 
-.open-menu {
-    display: none;
-}
+
 
 .nav-main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -36,12 +37,7 @@
 
 }
 
-.nav-bar{
-    display: flex;
-    gap: 6rem;
 
-
-}
 .nav-links {
     display: flex;
     align-self: center;
@@ -53,70 +49,27 @@
    
 }
 
-@media screen and (max-width: 769px){
-    .nav__toggle{
-        z-index: 40;
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 10px;
-        color: #ffffff;
-       
-    }
-
-    .log-buttons{
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        gap: 1rem;
-        margin-left: 20px;
-    }
-    
-    .show-menu{
-        right: 0;
-    }
-
-    .nav-bar{
-    position: fixed;
-    flex-direction: column;
-    top: 0;
-    z-index: 30;
-    right: -100%;
-    background-color: hsla(0, 0%, 100%, .1);
-    backdrop-filter: blur(16px);
-    width: 80%;
-    height: 100%;
-    padding: 6rem 3rem 0;
-    transition: right 0.5s;
-    gap: 1rem;
-    }
-
-    .show-menu{
-        right: 0;
-    }
-
-    .nav-close{
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-    }
-    .nav-links{
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 2rem;
-        color: #222D56;
-        >li> a {
-            color: #222D56
-        }
-    }
-
-     header .nav-links ul li a{
-        font-size: 1.5rem;
-        color: black;
-    }
+.bi-list{
+    width: 50px;
+    color: aliceblue;
 }
+
+ @media screen and (max-width: 900px){
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header .logo{
+    display: none;
+    }
+
+    .navbar-toggler-icon{
+        display: flex;
+        justify-content: start;
+    }
+
+} 
 
 
 .menu {
@@ -171,14 +124,14 @@
 
 
 
-@media screen and (max-width:700px){
+/* @media screen and (max-width:700px){
 
    .menu {
         column-rule-width: 50%;
     }
     
     
-}
+} */
 
 
 /* fin CSS NAVBAR */

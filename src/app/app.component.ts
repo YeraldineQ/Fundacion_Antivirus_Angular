@@ -11,3 +11,6 @@ import { RouterOutlet } from '@angular/router';//permite navegar entre las rutas
 export class AppComponent {
   title = 'Fundacion-Antivirus-Angular';
 }
+
+
+//https://docs.google.com/spreadsheets/d/1E8oSTj8c0ZwtejpUXcMSkGmykVkMvlAdyc1D0WnT8y4/edit?gid=0#gid=0 excel donde se guardan los datos

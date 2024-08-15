@@ -1,0 +1,43 @@
+    <!-- Barra de navegación  -->
+    <header class="header ">
+        <div class="nav-main container d-flex align-items-center">
+            <!--Logo fundación antivirus-->
+            <div class="col-4 logo">
+            <img src="assets/Logo Fundación Antivirus.png" alt="Logo Fundación">
+            </div>
+            
+            <nav class="nav-bar" id="nav-bar">
+                <ul class="nav-links">
+                <li><a routerLink="/public/home">Inicio</a></li>
+                <li><a routerLink="/public/home">Servicios</a></li>
+                </ul>
+
+                <!-- Sección Derecha -->
+                <div class=" col-8 right-section ">
+                    <div class="user-info-wrapper">
+                    <div class="user-info">
+                        <span id="user-name">NOMBRE COMPLETO DEL USUARIO</span>
+                        <!-- <div class="status">Usuario registrado</div> -->
+                        <div class="logout-button">
+                        <button id="logout">
+                            <i class="bi bi-box-arrow-left logout-icon"></i>
+                            Salir
+                        </button>
+                        </div>
+                    </div>
+                    <div class="user-photo">
+                        <img id="user-photo" class="user-photo-img" src="assets/Avatar.png" alt="Foto del Usuario"> <!-- Añade la foto del usuario aquí -->
+                    </div>
+                    </div>
+                </div>     
+            </nav>
+
+            
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="bx bx-menu" id="menu-button"></i>
+            </div>
+        </div>
+         
+    </header>
+    <!-- Fin  de Navbar -->

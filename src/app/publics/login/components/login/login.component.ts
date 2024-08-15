@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-import { LoginModule } from './login/login.module';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [LoginModule],
+  selector: 'app-login2',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

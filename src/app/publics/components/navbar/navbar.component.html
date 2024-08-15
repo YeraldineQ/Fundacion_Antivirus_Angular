@@ -1,8 +1,8 @@
 <!-- Barra de navegación  -->
-<header class="header ">
-    <div class="nav-main container d-flex align-items-center">
+<!-- <header class="header ">
+    <div class="nav-main container d-flex align-items-center"> -->
    <!--Logo fundación antivirus-->
-     <div class="logo">
+     <!-- <div class="logo">
        <img src="/assets/Logo-Fundación-Antivirus.png" alt="Logo Fundación">
      </div>
  
@@ -12,10 +12,10 @@
            <li (click)="scroll()" routerLink="home"><a>Oportunidades</a></li>
            <li (click)="scroll2()" routerLink="home"><a>Servicios</a></li>
            
-       </ul>
+       </ul> -->
       
        <!--Botones de inicio de sesión y registro-->
-         <div class="container-fluid log-buttons">
+         <!-- <div class="container-fluid log-buttons">
            <a class="btn" routerLink="login"><button>Ingresa</button></a>
            <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
          </div>        
@@ -28,4 +28,37 @@
        
        </div>
  
-     </header>
+     </header> -->
+
+     <header class="header container-fluid">
+      <div class="nav-main container ">
+        <nav class="navbar navbar-expand-lg  nav-bar ">
+          <!--Logo fundación antivirus-->
+            <img class="img-fluid logo" src="/assets/Logo Fundación Antivirus.png" alt="Logo Fundación">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav nav-links">
+                <li>
+                  <a routerLink="home">Inicio</a>
+                </li>
+                <li (click)="scroll()" routerLink="home">
+                  <a>Oportunidades</a>
+                </li>
+                <li (click)="scroll2()" routerLink="home">
+                  <a>Servicios</a>
+                </li>
+                
+              </ul>
+  
+              <!--Botones de inicio de sesión y registro-->
+          <div class="container-fluid log-buttons d-flex">
+            <a class="btn" routerLink="login"><button>Ingresa</button></a>
+            <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
+          </div> 
+            </div>
+          
+        </nav>
+      </div>   
+    </header>
