@@ -1,64 +1,37 @@
-<!-- Barra de navegación  -->
-<!-- <header class="header ">
-    <div class="nav-main container d-flex align-items-center"> -->
-   <!--Logo fundación antivirus-->
-     <!-- <div class="logo">
-       <img src="/assets/Logo-Fundación-Antivirus.png" alt="Logo Fundación">
-     </div>
- 
-     <nav class="nav-bar" id="nav-bar">
-       <ul class="nav-links">
-           <li><a routerLink="home">Inicio</a></li>
-           <li (click)="scroll()" routerLink="home"><a>Oportunidades</a></li>
-           <li (click)="scroll2()" routerLink="home"><a>Servicios</a></li>
-           
-       </ul> -->
-      
-       <!--Botones de inicio de sesión y registro-->
-         <!-- <div class="container-fluid log-buttons">
-           <a class="btn" routerLink="login"><button>Ingresa</button></a>
-           <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
-         </div>        
-   
-       </nav>
- 
-         <div class="nav__toggle" id="nav-toggle">
-         <i class="bx bx-menu" id="menu-button"></i>
-         </div>
-       
-       </div>
- 
-     </header> -->
 
      <header class="header container-fluid">
-      <div class="nav-main container ">
-        <nav class="navbar navbar-expand-lg  nav-bar ">
-          <!--Logo fundación antivirus-->
+      <div class="nav-main container">
+        <nav class="navbar navbar-expand-lg nav-bar">
+          <!-- Logo fundación antivirus -->
+          <a class="navbar-brand" href="#">
             <img class="img-fluid logo" src="/assets/Logo Fundación Antivirus.png" alt="Logo Fundación">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav nav-links">
-                <li>
-                  <a routerLink="home">Inicio</a>
-                </li>
-                <li (click)="scroll()" routerLink="home">
-                  <a>Oportunidades</a>
-                </li>
-                <li (click)="scroll2()" routerLink="home">
-                  <a>Servicios</a>
-                </li>
-                
-              </ul>
-  
-              <!--Botones de inicio de sesión y registro-->
-          <div class="container-fluid log-buttons d-flex">
-            <a class="btn" routerLink="login"><button>Ingresa</button></a>
-            <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
-          </div> 
+          </a>
+    
+          <!-- Botón de menú hamburguesa -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Contenedor del menú desplegable -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-links">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="home">Inicio</a>
+              </li>
+              <li class="nav-item" (click)="scroll()" routerLink="home">
+                <a class="nav-link">Oportunidades</a>
+              </li>
+              <li class="nav-item" (click)="scroll2()" routerLink="home">
+                <a class="nav-link">Servicios</a>
+              </li>
+            </ul>
+    
+            <!-- Botones de inicio de sesión y registro -->
+            <div class="log-buttons botones-inicio-registro">
+              <a class="btn" routerLink="login"><button>Ingresa</button></a>
+              <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
             </div>
-          
+          </div>
         </nav>
-      </div>   
+      </div>
     </header>

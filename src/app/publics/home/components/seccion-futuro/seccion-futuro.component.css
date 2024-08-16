@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 100px auto 70px;
+    
 }
 
 
@@ -23,6 +23,7 @@
     font-size: 25px;
     text-align: justify;
     margin-bottom: 30px;
+    padding: 0 10px;
 }
 
 /*COMIENZA LA VENTANA MODAL*/
@@ -176,7 +177,7 @@ a:hover {
     .main-futuro {
         flex-direction: column;
         align-items: center;
-        margin: 20px;
+        margin: 20px 0;
     }
 
     .titulo-futuro {
@@ -184,9 +185,10 @@ a:hover {
     }
 
     .parrafo-futuro {
+        font-size: 20px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
         margin-bottom: 20px;
         text-align: justify;
-        font-size: 20px;
+        padding: 0 15px; /* Aumenta el relleno para pantallas medianas */
     }
 
     .img-futuro {
@@ -232,7 +234,11 @@ a:hover {
     font-size: 0.9em;
     padding: 10px;
    }
-
+   .parrafo-futuro {
+    font-size: 18px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    margin-bottom: 15px;
+    padding: 0 20px; /* Aumenta el relleno para pantallas pequeñas */
+}
 
 }
 /* Media queries para pantallas medianas */

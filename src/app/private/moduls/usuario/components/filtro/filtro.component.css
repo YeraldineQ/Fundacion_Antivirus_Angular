@@ -83,16 +83,35 @@
 
 
 /* MEDIA QUERY PANTALLAS MEDIANAS*/
-  @media (max-width: 768px) {
-    .date-filter-container {
-      width: 100%;
-      padding: 10px;
-    }
-    
-    .filter-options-container {
-      flex-direction: column;
-      gap: 3px;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .filter-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .filter-options-container .input-group {
+    flex: 1 1 48%; /* Hace que ocupen aproximadamente la mitad del contenedor */
+    min-width: 220px; /* Asegura un tamaño mínimo para que no se compriman demasiado */
+  }
+
+  .filter-options-container .input-group:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+  }
+
+  .filter-options-container .input-group-sect {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 48%; /* Ocupa aproximadamente la mitad del contenedor */
+  }
+
+  .filter-options-container .input-group-sect .boton-busqueda,
+  .filter-options-container .input-group-sect .boton-limpiar {
+    flex: 1; /* Ocupa el mismo espacio que el campo de sector */
+    min-width: 100px; /* Asegura un tamaño mínimo */
+  }
 }
   
 

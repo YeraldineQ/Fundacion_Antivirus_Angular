@@ -1,73 +1,48 @@
+/* General Styles */
 .wrapper {
   justify-content: center;
-  padding: 68px;
+  padding: 20px;
   width: 100%;
   position: relative;
   margin-bottom: 35px;
 }
 
-.t-oportunidades{
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    color: rgb(34, 45, 86);
-    text-align: center;
-    font-size: 70px;
-    margin-top: 150px;
+.t-oportunidades {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(34, 45, 86);
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
 }
 
 .title {
- 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-
-.arrows {
-  position: relative;
-  gap: 40px;
-  top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.i {
-  height: 50px;
-  width: 50px;
-  background: #32526E;
-  color: #fff;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.25rem;
-  
-  user-select: none;
-}
-
+/* Carousel */
 .wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3));
+  grid-auto-columns: calc(100% / 3); /* Three columns for larger screens */
   gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: 0;
-  
+  scrollbar-width: none;
 }
 
 .carousel::-webkit-scrollbar {
   display: none;
-} 
+}
 
 .carousel :where(.card, .img) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-direction: column;
-  
 }
 
 .carousel.no-transition {
@@ -82,7 +57,6 @@
 .carousel.dragging .card {
   cursor: grab;
   user-select: none;
-  
 }
 
 .carousel .card {
@@ -96,50 +70,44 @@
   flex-direction: column;
   background-color: #ffffff;
   gap: 20px;
-  
-  
-
 }
 
 .card img {
-  height: 340px;
+  height: 220px; /* Reduce image height for better mobile view */
   width: 100%;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
-  
 }
 
 .info-container {
   font-family: Impact;
-  font-size: 30px;
-  height: 200px;
+  font-size: 18px;
+  height: auto;
   width: 100%;
   border-radius: 8px;
-  
 }
 
 .info-container h2 {
   color: rgb(34, 45, 86);
-  font-size: 1.77rem;
-  margin: 20px 0 20px 0;
+  font-size: 1.5rem;
+  margin: 10px 0;
   align-items: center;
   text-align: center;
-  
 }
 
 .info-container p {
   font-family: Verdana;
-  font-size: 1rem; 
+  font-size: 1rem;
   margin: 10px;
 }
 
 button {
   background-color: #00001A;
   color: white;
-  width: 200px;
+  width: 150px;
   padding: 10px;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 15px;
   border: none;
   transition: transform 0.1s ease-in-out;
@@ -157,14 +125,74 @@ button {
   100% { transform: translateY(0); }
 }
 
-@media screen and (max-width: 900px) {
-  .wrapper .carousel {
-      grid-auto-columns: calc((100% / 2));
+.arrows {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center; /* Alinea verticalmente las flechas */
+  margin-top: 20px;
+  width: 100%;
+}
+
+.i {
+  height: 50px;
+  width: 50px;
+  background: #32526E;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  user-select: none;
+  transition: background-color 0.3s ease; /* Añade una transición al color de fondo */
+}
+
+.i:hover {
+  background-color: #FFBA08; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Asegura que las flechas queden centradas en pantallas móviles */
+@media screen and (max-width: 600px) {
+  .arrows {
+    justify-content: center; /* Centra las flechas horizontalmente */
+    gap: 20px; /* Espacio entre las flechas */
   }
 }
 
-@media screen and (max-width: 600px) {
+/* Adjustments for medium screens */
+@media screen and (max-width: 900px) {
   .wrapper .carousel {
-      grid-auto-columns: 100%;
+      grid-auto-columns: calc(100% / 2); /* Two columns for medium screens */
+  }
+
+  .t-oportunidades {
+    font-size: 50px; /* Reduce title size */
   }
 }
+
+/* Adjustments for small screens */
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+      grid-auto-columns: 100%; /* Single column for small screens */
+  }
+
+  .t-oportunidades {
+    font-size: 35px; /* Further reduce title size */
+  }
+  
+  .card img {
+    height: 200px; /* Further reduce image height for mobile view */
+  }
+
+  .info-container h2 {
+    font-size: 1.2rem; /* Smaller text for mobile */
+  }
+
+  button {
+    width: 100px;
+    font-size: 16px; /* Adjust button size for mobile */
+  }
+}
+
