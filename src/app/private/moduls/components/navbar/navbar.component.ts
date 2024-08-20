@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Renderer2 } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private renderer: Renderer2, private router: Router){
+
+  }
 //ensayo
 isMenuOpen = false;
 
@@ -21,7 +24,16 @@ closeMenu() {
 }
 //fin ensayo
 
-
+servicios2(){
+  this.router.navigate(['/public/home']).then(()=>{
+    setTimeout(()=>{
+    const element = this.renderer.selectRootElement('#servicios', true)
+    element.scrollIntoView({behavior: 'smooth'})
+  
+    })
+    
+  })
+}
 }
 
 //ensayo

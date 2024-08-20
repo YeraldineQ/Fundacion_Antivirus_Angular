@@ -13,6 +13,7 @@
     text-decoration: none;
     font-weight: bold;
     color: #FFBA08;
+    cursor: pointer;
 }
 
 .primary-btn:hover {
@@ -21,7 +22,7 @@
     color: #222d56;
 }
 
-.text-card-h5-op{
+.text-card-h5-op {
     color: #222D56;
     text-align: left;
 }
@@ -30,14 +31,15 @@
     text-align: center;
     border-width: 1px;
     border-style: solid;
-    border-color:   #32526E;
+    border-color: #32526E;
     border-radius: 22px;
     font-weight: bold;
     color: #32526E;
     padding: 6px 12px 6px 12px;
     background-color: white;
 }
-.boton-card:hover{
+
+.boton-card:hover {
     text-align: center;
     border-width: 1px;
     border-style: solid;
@@ -47,7 +49,7 @@
     color: #FFBA08;
 }
 
-.text-center{
+.text-center {
     font-size: 60px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #222d56;
@@ -56,24 +58,37 @@
     margin-top: 150px;
 }
 
-.card-oportunidades{
+.card-oportunidades {
     width: 500px;
-    border-radius: 15px; /* Ajusta este valor para redondear los bordes de las tarjetas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en la parte inferior */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .img-card {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
 }
 
-
-/* Hacer las imágenes responsivas y ajustar su altura */
-.card-oportunidades .img-card {
-height: 200px; /* Ajusta la altura según sea necesario */
-object-fit: cover; /* Ajusta la imagen para que cubra el contenedor manteniendo su proporción */
-width: 100%;
+/* Estilos para mostrar y ocultar el texto adicional */
+.toggle-text {
+    display: none;
 }
 
+.more-text {
+    display: none;
+}
+
+.toggle-text:checked ~ .more-text {
+    display: inline;
+}
+
+.toggle-text:checked ~ .primary-btn::after {
+    content: ' Ver menos';
+}
+
+.toggle-text:not(:checked) ~ .primary-btn::after {
+    content: ' Ver más';
+}

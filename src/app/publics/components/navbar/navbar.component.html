@@ -1,37 +1,56 @@
+<header class="header container-fluid">
+  <div class="nav-main container">
+    <nav class="navbar navbar-expand-lg nav-bar">
+      <!-- Logo fundación antivirus -->
+      <a class="navbar-brand" href="#">
+        <img
+          class="img-fluid logo"
+          src="/assets/Logo Fundación Antivirus.png"
+          alt="Logo Fundación"
+        />
+      </a>
 
-     <header class="header container-fluid">
-      <div class="nav-main container">
-        <nav class="navbar navbar-expand-lg nav-bar">
-          <!-- Logo fundación antivirus -->
-          <a class="navbar-brand" href="#">
-            <img class="img-fluid logo" src="/assets/Logo Fundación Antivirus.png" alt="Logo Fundación">
-          </a>
-    
-          <!-- Botón de menú hamburguesa -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <!-- Contenedor del menú desplegable -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav nav-links">
-              <li class="nav-item">
-                <a class="nav-link" routerLink="home">Inicio</a>
-              </li>
-              <li class="nav-item" (click)="scroll()" routerLink="home">
-                <a class="nav-link">Oportunidades</a>
-              </li>
-              <li class="nav-item" (click)="scroll2()" routerLink="home">
-                <a class="nav-link">Servicios</a>
-              </li>
-            </ul>
-    
-            <!-- Botones de inicio de sesión y registro -->
-            <div class="log-buttons botones-inicio-registro">
-              <a class="btn" routerLink="login"><button>Ingresa</button></a>
-              <a class="btn" routerLink="registrate"><button>Regístrate</button></a>
-            </div>
-          </div>
-        </nav>
+      <!-- Botón de menú hamburguesa -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenedor del menú desplegable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav-links">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home" (click)="inicio(ingresa, registrate)">Inicio</a>
+          </li>
+          <li class="nav-item" (click)="scroll(ingresa, registrate)">
+            <a class="nav-link">Oportunidades</a>
+          </li>
+          <li class="nav-item" (click)="scroll2(ingresa, registrate)">
+            <a class="nav-link">Servicios</a>
+          </li>
+        </ul>
+
+        <!-- Botones de inicio de sesión y registro -->
+        <div class="log-buttons botones-inicio-registro">
+          <a class="btn" routerLink="login" #ingresa 
+            ><button (click)="login(ingresa, registrate)">
+              Ingresa
+            </button></a
+          >
+          <a class="btn" routerLink="registrate" #registrate
+            ><button (click)="register(ingresa, registrate)">
+              Regístrate
+            </button></a
+          >
+        </div>
       </div>
-    </header>
+    </nav>
+  </div>
+</header>
